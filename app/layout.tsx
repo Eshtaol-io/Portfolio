@@ -1,7 +1,10 @@
+
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://eshtaolportfolio.vercel.app"),
+
   title: "Eshtaol Eyuel | Social Science Scholar & Software Developer",
   description:
     "The portfolio of Eshtaol Eyuel — exploring social sciences, public policy, international relations, and software development.",
@@ -13,35 +16,45 @@ export const metadata: Metadata = {
     "international relations",
     "React Native",
     "Expo",
-    "Supabase"
+    "Supabase",
   ],
   authors: [{ name: "Eshtaol Eyuel" }],
   openGraph: {
     title: "Eshtaol Eyuel | Social Science Scholar & Software Developer",
     description:
       "Social sciences, public policy, international relations, and software development.",
-    type: "website"
+    url: "https://eshtaolportfolio.vercel.app",
+    siteName: "Eshtaol Eyuel Portfolio",
+    images: [
+      {
+        url: "/profile.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Eshtaol Eyuel",
+      },
+    ],
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Eshtaol Eyuel | Portfolio",
-    description:
-      "Social Science Scholar & Software Developer"
+    description: "Social Science Scholar & Software Developer",
+    images: ["/profile.jpg"],
   },
   robots: {
     index: true,
-    follow: true
-  }
+    follow: true,
+  },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0b1020"
+  themeColor: "#0b1020",
 };
 
 export default function RootLayout({
-  children
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
