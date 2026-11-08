@@ -1,4 +1,3 @@
-
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
@@ -40,6 +39,9 @@ export const metadata: Metadata = {
     title: "Eshtaol Eyuel | Portfolio",
     description: "Social Science Scholar & Software Developer",
     images: ["/profile.jpg"],
+  },
+  verification: {
+    google: "mPMS7bbtVMXjQ96jki56Wo87sJtonWIkL7l293O5Crk",
   },
   robots: {
     index: true,
